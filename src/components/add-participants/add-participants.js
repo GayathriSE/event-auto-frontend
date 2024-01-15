@@ -38,6 +38,10 @@ const AddParticipants = () => {
   const onFinish = (value) => {
     try {
       setLoad(true);
+      if (!Cookies.get("eventId")) {
+        alert("Error occured. Please try again later");
+        return;
+      }
       const output = transformInput(value);
       const payload = {
         eventId: Cookies.get("eventId"),
@@ -50,8 +54,18 @@ const AddParticipants = () => {
         )
         .then((data) => {
           setLoad(false);
-          setShowResult(true);
-          console.log("Hunspot sync Done");
+          if (data.data.statusCode === 200) {
+            setShowResult(true);
+            console.log("Hunspot sync Done");
+          } else {
+            setLoad(false);
+            alert("Something Went Wrong!");
+          }
+        })
+        .catch((err) => {
+          setLoad(false);
+          alert("Something went wrong");
+          console.log(err);
         });
     } catch (e) {
       setLoad(false);

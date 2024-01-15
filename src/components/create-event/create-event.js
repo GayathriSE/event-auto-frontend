@@ -66,7 +66,15 @@ const CreateEvent = () => {
           if (data.data.eventId.id) {
             Cookies.set("eventId", data.data.eventId.id, { expires: 7 });
             setShowResult(true);
+          } else {
+            setLoad(false);
+            alert("Something Went Wrong!");
           }
+        })
+        .catch((err) => {
+          console.log(err);
+          setLoad(false);
+          alert("Something Went Wrong!");
         });
     } catch (e) {
       setLoad(false);
