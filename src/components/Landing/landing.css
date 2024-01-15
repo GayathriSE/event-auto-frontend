@@ -1,0 +1,20 @@
+.landing-page{
+    height: calc(100vh - 7rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+}
+.title{
+    font-size: 4rem;
+}
+.sub-title{
+    font-size: 2rem;
+
+}
+.description{
+    font-size: 1rem;
+    width: 55%;
+    text-align: center;
+}

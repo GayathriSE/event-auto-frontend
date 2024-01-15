@@ -1,0 +1,21 @@
+
+.popup-image{
+    width: 30rem;
+    height: 20rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.popup-image img{
+   width: 100%;
+   height: 100%;
+
+}
+.success-title{
+    text-align: center;
+    color: #141c64;
+}
+.success-sub{
+    text-align: center;
+    color: #030b4d;
+}

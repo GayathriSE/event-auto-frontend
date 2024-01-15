@@ -1,0 +1,56 @@
+.event-form-container-par {
+    max-width: 60%;
+    margin: 50px auto;
+    padding: 2rem;
+    background-color: white;
+    box-shadow: 0 25px 10px rgba(0.5, 0, 10, 0.5);
+    border-radius: 5px;
+    max-height: 30rem !important;
+    overflow:auto;
+}
+
+.form-title {
+    color: #141c64;
+}
+
+.event-form {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    gap: 2rem;
+}
+
+.form-inputs-par {
+    width: 18rem !important;
+}
+
+.form-inputs input {
+    padding: 0.5rem;
+}
+
+.sbt-button {
+    background: #141c64;
+    color: white;
+    font-weight: 600;
+}
+
+.sbt-button:hover {
+    background:none;
+    color: white;
+}
+
+.add-inputs{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap:1rem
+}
+.btn-container{
+    display: flex;
+    justify-content: space-between;
+}
+@media (max-width:900px){
+    .right-bg{
+        display: none;
+    }
+}
